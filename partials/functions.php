@@ -1,24 +1,30 @@
 <?php
 
-// create a password generator function
-function generator_for_password($password_length)
+// password generator function
+function generator($password_length)
 {
-    // avaible characters for the password generator
-    $password_chars = ["abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789", "*!?£$%&-_@"];
-    
-    // init empty password
-    $password_generated = "";
-    // check if the lenght is major than 0 value (if is empty)
+    // avaible characters
+    $password_avaible_data = ["abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789", "*!£%&?-_@$"];
+
+    // init empty password data
+    $passwor_generated = "";
+
+    // check if the lenght is major than 0
     if ($password_length > 0) {
 
+        // for loop to generate a random password data
         for ($i = 0; $i < $password_length; $i++) {
-            // the generator select random characters from the default data
-            $random_value = rand(0, count($password_chars) - 1);
-            $random_chars = rand(0, strlen($password_chars[$random_value]) - 1);
-            $password_generated .= $password_chars[$random_value][$random_chars];
+
+            // ramdom characters
+            $password_random_chars = rand(0, count($password_avaible_data) - 1);
+            $password_random_item = rand(0, strlen($password_avaible_data[$password_random_chars]) - 1);
+            $passwor_generated .= $password_avaible_data[$password_random_chars][$password_random_item];
         }
-        // password generated data
-        return $password_generated;
+        // password generated
+        return $passwor_generated;
+
+    } else {
+        return $passwor_generated = "NONE";
     }
 }
 ?>

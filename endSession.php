@@ -1,9 +1,9 @@
 <?php
-// session data start/end
+// session data init/end
 session_start();
 session_unset();
 session_destroy();
 
-// redirect to index.php page
+// redirect to the index.php page
 header("Location: ./index.php");
 ?>
