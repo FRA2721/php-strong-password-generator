@@ -1,0 +1,64 @@
+/* general reset formatting section */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body formatting section */
+body{
+    background-color: rgb(2, 2, 50);
+    color: white;
+}
+
+/* html formatting section */
+html{
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* h1 formatting section */
+h1{
+    opacity: .5;
+    font-size: 3rem;
+    margin-bottom: .3em;
+}
+
+/* header formatting section */
+header .container{
+    text-align: center;
+    padding: 3em 0;
+}
+
+
+/* main formatting section */
+main .container{
+    background-color: white;
+    color:  rgb(2, 2, 50);
+    border-radius: 5px;
+}
+
+/* form formatting data section */
+form{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 3em 1.5em;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/* form data formatting section */
+.form-data{
+    width: 400px;
+    border-radius: 5px;
+    border: 1.5px solid  rgb(2, 2, 50);
+    padding: .5rem;
+}
+
+/* button formatting section */
+button:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
